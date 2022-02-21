@@ -8,4 +8,9 @@ function Child(props) {
   );
 }
 
+Child.defaultProps = {
+  name: 'Pony',
+  text: '沒有',
+};
+
 export default Child;

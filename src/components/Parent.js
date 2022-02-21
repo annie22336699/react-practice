@@ -4,6 +4,7 @@ function Parent() {
   return (
     <>
       <Child text="Hello" name="Eddy" />
+      <Child />
     </>
   );
 }
