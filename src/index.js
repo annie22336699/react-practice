@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import App2 from './App2';
+// import CC from './CC';
+// import FC from './FC';
+// import App3 from './App3';
+// import Students from './Students';
+import Props from './Props';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <App2 /> */}
+    {/* <CC /> */}
+    {/* <FC /> */}
+    {/* <App3 /> */}
+    {/* <Students /> */}
+    <Props />
   </React.StrictMode>,
   document.getElementById('root')
 );
