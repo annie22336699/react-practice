@@ -8,7 +8,10 @@ import reportWebVitals from './reportWebVitals';
 // import FC from './FC';
 // import App3 from './App3';
 // import Students from './Students';
-import Props from './Props';
+// import Props from './Props';
+// import PropsReactShare from './PropsReactShare';
+import './menu.css';
+import Homework01 from './Homework01';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,7 +21,9 @@ ReactDOM.render(
     {/* <FC /> */}
     {/* <App3 /> */}
     {/* <Students /> */}
-    <Props />
+    {/* <Props /> */}
+    {/* <PropsReactShare /> */}
+    <Homework01 />
   </React.StrictMode>,
   document.getElementById('root')
 );
