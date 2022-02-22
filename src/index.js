@@ -10,8 +10,14 @@ import reportWebVitals from './reportWebVitals';
 // import Students from './Students';
 // import Props from './Props';
 // import PropsReactShare from './PropsReactShare';
-import './menu.css';
-import Homework01 from './Homework01';
+// import './menu.css';
+// import Homework01 from './Homework01';
+// import App4 from './App4';
+// import Homework02 from './Homework02';
+// import ShoppingCart from './ShoppingCart';
+// import ShoppingCartCh from './ShoppingCartCh';
+import Cart from './Cart';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,7 +29,12 @@ ReactDOM.render(
     {/* <Students /> */}
     {/* <Props /> */}
     {/* <PropsReactShare /> */}
-    <Homework01 />
+    {/* <Homework01 /> */}
+    {/* <App4 /> */}
+    {/* <Homework02 /> */}
+    {/* <ShoppingCart /> */}
+    {/* <ShoppingCartCh /> */}
+    <Cart />
   </React.StrictMode>,
   document.getElementById('root')
 );
