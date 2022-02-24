@@ -16,8 +16,8 @@ import reportWebVitals from './reportWebVitals';
 // import Homework02 from './Homework02';
 // import ShoppingCart from './ShoppingCart';
 // import ShoppingCartCh from './ShoppingCartCh';
-import Cart from './Cart';
-
+// import Cart from './Cart';
+import Form01 from './Form01';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -34,7 +34,8 @@ ReactDOM.render(
     {/* <Homework02 /> */}
     {/* <ShoppingCart /> */}
     {/* <ShoppingCartCh /> */}
-    <Cart />
+    {/* <Cart /> */}
+    <Form01 />
   </React.StrictMode>,
   document.getElementById('root')
 );

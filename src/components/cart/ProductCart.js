@@ -8,7 +8,7 @@ function ProductCart(prpos) {
   //     price: 440,
   // }
 
-  const { id, name, categroy, image, price } = prpos;
+  const { id, name, categroy, image, price, count, setCount } = prpos;
 
   return (
     <>
@@ -22,11 +22,25 @@ function ProductCart(prpos) {
             <div className="row">{name}</div>
           </div>
           <div className="col">
-            <a href="#/">-</a>
-            <a href="#/" className="border">
-              1
+            <a
+              href="#/"
+              onClick={() => {
+                if (count - 1 >= 1) setCount(count - 1);
+              }}
+            >
+              -
             </a>
-            <a href="#/">+</a>
+            <a href="#/" className="border">
+              {count}
+            </a>
+            <a
+              href="#/"
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              +
+            </a>
           </div>
           <div className="col">
             ${price} <span className="close">✕</span>
