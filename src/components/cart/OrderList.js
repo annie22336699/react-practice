@@ -1,31 +1,9 @@
 import React from 'react';
 import ProductCart from './ProductCart';
 
-const products = [
-  {
-    id: 1,
-    name: '咖啡色棉 T-shirt',
-    categroy: 'Shirt',
-    image: 'https://i.imgur.com/1GrakTl.jpg',
-    price: 440,
-  },
-  {
-    id: 2,
-    name: '白色棉 T-shirt',
-    categroy: 'Shirt',
-    image: 'https://i.imgur.com/ba3tvGm.jpg',
-    price: 400,
-  },
-  {
-    id: 3,
-    name: '黑色棉 T-shirt',
-    categroy: 'Shirt',
-    image: 'https://i.imgur.com/pHQ3xT3.jpg',
-    price: 400,
-  },
-];
+function OrderList(props) {
+  const { products, count, setCount } = props;
 
-function OrderList() {
   return (
     <>
       <div className="col-md-8 cart">
@@ -52,6 +30,8 @@ function OrderList() {
               categroy={categroy}
               price={price}
               image={image}
+              count={count}
+              setCount={setCount}
             />
           );
         })}
