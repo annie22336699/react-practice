@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // import FCLifecycle01 from './components/FCLifecycle01';
 import FCLifecycle02 from './components/FCLifecycle02';
 

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import CCLifecycle from './components/CCLifecycle'
+import React, { useState } from 'react';
+// import React, { useState, useEffect } from 'react';  // useEffect就沒用到不知道為啥需要
+import CCLifecycle from './components/CCLifecycle';
 
 function LifeRecyle01() {
   const [alive, setAlive] = useState(true);

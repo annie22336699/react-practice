@@ -17,7 +17,7 @@ function Form02() {
         name="fullname"
         onChange={handleChange}
       />
-      <br/>
+      <br />
       <label>電話</label>
       <input
         type="text"
