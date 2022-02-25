@@ -20,7 +20,8 @@ import reportWebVitals from './reportWebVitals';
 // import Form01 from './Form01';
 // import Form02 from './Form02';
 // import LifeRecyle01 from './LifeRecyle01';
-import LifeRecyle02 from './LifeRecyle02';
+// import LifeRecyle02 from './LifeRecyle02';
+import Spinner from './Spinner';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -41,7 +42,8 @@ ReactDOM.render(
     {/* <Form01 /> */}
     {/* <Form02 /> */}
     {/* <LifeRecyle01 /> */}
-    <LifeRecyle02 />
+    {/* <LifeRecyle02 /> */}
+    <Spinner />
   </React.StrictMode>,
   document.getElementById('root')
 );
