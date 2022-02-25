@@ -19,7 +19,8 @@ import reportWebVitals from './reportWebVitals';
 // import Cart from './Cart';
 // import Form01 from './Form01';
 // import Form02 from './Form02';
-import LifeRecyle01 from './LifeRecyle01';
+// import LifeRecyle01 from './LifeRecyle01';
+import LifeRecyle02 from './LifeRecyle02';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -39,7 +40,8 @@ ReactDOM.render(
     {/* <Cart /> */}
     {/* <Form01 /> */}
     {/* <Form02 /> */}
-    <LifeRecyle01 />
+    {/* <LifeRecyle01 /> */}
+    <LifeRecyle02 />
   </React.StrictMode>,
   document.getElementById('root')
 );

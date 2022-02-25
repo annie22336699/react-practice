@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import CCLifecycle from './components/CCLifecycle'
 
 function LifeRecyle01() {
   const [alive, setAlive] = useState(true);
 
   return (
     <>
-      {alive && <LifeRecyle01 />}
+      {alive && <CCLifecycle />}
       <button
         onClick={() => {
           setAlive(!alive);
