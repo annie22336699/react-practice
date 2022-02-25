@@ -6,13 +6,21 @@ function UserList(props) {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
 
+  // 從伺服器載入資料
+  const fetchUser = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await response.json();
+    setUsers(data);
+  };
+
   // didMount
   useEffect(() => {
     // 開啟載入指示器
     setLoading(true);
 
     // 戴入資料
-    setUsers(rawData);
+    // setUsers(rawData);
+    fetchUser();
 
     // 2秒後關起指示器
     setTimeout(() => {
