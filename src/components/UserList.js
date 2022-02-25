@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import rawData from '../data/users.json';
 import './UserList.css';
 
 function UserList(props) {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
+
+  const [searchWord, setSearchWord] = useState('');
 
   // 從伺服器載入資料
   const fetchUser = async () => {
@@ -13,57 +14,72 @@ function UserList(props) {
     setUsers(data);
   };
 
+  const fetchFilterUser = async (keyword) => {
+    const response = await fetch(
+      'https://jsonplaceholder.typicode.com/users?name_like=' + keyword
+    );
+    const data = await response.json();
+    setUsers(data);
+  };
+
+  // x秒後，自動關閉載入資料指示 auto close spinner
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => setLoading(false), 1500);
+    }
+  }, [loading]);
+
   // didMount
   useEffect(() => {
-    // 開啟載入指示器
+    // 開啟載入資料指示
     setLoading(true);
 
-    // 戴入資料
-    // setUsers(rawData);
+    // 載入資料(ajax/fetch...)
     fetchUser();
-
-    // 2秒後關起指示器
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
   }, []);
 
   const spinner = (
-    <div className="spinner-border text-primary" role="status">
-      <span className="sr-only">Loading...</span>
+    <div className="d-flex justify-content-center">
+      <div className="spinner-border text-success" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
     </div>
   );
 
-  const userListTable = (
-    <table className="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        {users.map((v, i) => {
-          return (
-            <tr key={v.id}>
-              <td>{v.id}</td>
-              <td>{v.name}</td>
-              <td>{v.email}</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
-  );
-
-  return (
+  const display = (
     <>
-      <div className="container">
-        <div className="center">{loading ? spinner : userListTable}</div>
-      </div>
+      <input
+        type="text"
+        value={searchWord}
+        onChange={(e) => {
+          setSearchWord(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          // 開啟載入資料指示
+          setLoading(true);
+          // 載入資料(ajax/fetch...)
+          fetchFilterUser(searchWord);
+        }}
+      >
+        Search
+      </button>
+      <table>
+        <tbody>
+          {users.map((v, i) => {
+            return (
+              <tr key={v.id}>
+                <td>{v.name}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </>
   );
+
+  return <>{loading ? spinner : display}</>;
 }
 
 export default UserList;
