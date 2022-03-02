@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import App2 from './App2';
@@ -21,7 +21,11 @@ import reportWebVitals from './reportWebVitals';
 // import Form02 from './Form02';
 // import LifeRecyle01 from './LifeRecyle01';
 // import LifeRecyle02 from './LifeRecyle02';
-import Spinner from './Spinner';
+// import Spinner from './Spinner';
+// import JQueryTest01 from './JQueryTest01';
+// import JQueryTest02 from './JQueryTest02';
+// import JQueryTest03 from './JQueryTest03';
+import JQueryTest04 from './JQueryTest04.js';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -43,7 +47,11 @@ ReactDOM.render(
     {/* <Form02 /> */}
     {/* <LifeRecyle01 /> */}
     {/* <LifeRecyle02 /> */}
-    <Spinner />
+    {/* <Spinner /> */}
+    {/* <JQueryTest01 /> */}
+    {/* <JQueryTest02 /> */}
+    {/* <JQueryTest03 /> */}
+    <JQueryTest04 />
   </React.StrictMode>,
   document.getElementById('root')
 );
