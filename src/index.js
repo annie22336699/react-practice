@@ -25,7 +25,10 @@ import reportWebVitals from './reportWebVitals';
 // import JQueryTest01 from './JQueryTest01';
 // import JQueryTest02 from './JQueryTest02';
 // import JQueryTest03 from './JQueryTest03';
-import JQueryTest04 from './JQueryTest04.js';
+// import JQueryTest04 from './JQueryTest04';
+// import BootstrapsTest01 from './BootstrapsTest01'
+// import BootstrapsTest02 from './BootstrapsTest02';
+import RouterTest from './RouterTest';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -51,7 +54,10 @@ ReactDOM.render(
     {/* <JQueryTest01 /> */}
     {/* <JQueryTest02 /> */}
     {/* <JQueryTest03 /> */}
-    <JQueryTest04 />
+    {/* <JQueryTest04 /> */}
+    {/* <BootstrapsTest01 /> */}
+    {/* <BootstrapsTest02 /> */}
+    <RouterTest />
   </React.StrictMode>,
   document.getElementById('root')
 );
