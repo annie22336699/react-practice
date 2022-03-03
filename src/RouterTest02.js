@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-import RouterMenu from './components/RouterMenu';
+import RouterMenu from './components/RouterMenu'; // nav之類的選單
+import MLBreadcrumb from './components/MLBreadcrumb'; // 麵包屑
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -20,6 +22,7 @@ function RouterTest01() {
       <>
         {/* 選單 */}
         <RouterMenu />
+        <MLBreadcrumb />
         {/* 路由表 */}
         <Switch>
           <Route exact path="/about">
