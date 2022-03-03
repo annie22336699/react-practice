@@ -5,7 +5,10 @@ import RouterMenu from './components/RouterMenu';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Product from './pages/Product';
+import ProductDetail from './pages/ProductDetail';
+import ProductDetailQS from './pages/ProductDetailQS';
+import ProductList from './pages/ProductList';
+import ProductListQS from './pages/ProductListQS';
 import Login from './pages/Login';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -25,8 +28,18 @@ function RouterTest01() {
           <Route path="/about/contact">
             <Contact />
           </Route>
-          <Route path="/product">
-            <Product />
+          <Route path="/product-list-qs">
+            <ProductListQS />
+          </Route>
+          <Route path="/product-detail-qs">
+            <ProductDetailQS />
+          </Route>
+          <Route path="/product-list">
+            <ProductList />
+          </Route>
+          {/* 網址上的動態參數params */}
+          <Route path="/product-detail/:id">
+            <ProductDetail />
           </Route>
           <Route path="/login">
             <Login auth={auth} setAuth={setAuth} />
