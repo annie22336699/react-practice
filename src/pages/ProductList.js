@@ -10,7 +10,7 @@ function ProductList(props) {
         {data.map((v, i) => {
           return (
             <li key={i}>
-              <Link to={'/product-detail/' + v.id}>{v.name}</Link>
+              <Link to={'/product-list/product-detail/' + v.id}>{v.name}</Link>
             </li>
           );
         })}

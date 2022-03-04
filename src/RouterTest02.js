@@ -13,6 +13,8 @@ import ProductList from './pages/ProductList';
 import ProductListQS from './pages/ProductListQS';
 import Login from './pages/Login';
 import NotFoundPage from './pages/NotFoundPage';
+import OrderIndex from './pages/Order/OrderIndex';
+import OrderSteps from './pages/Order2/OrderSteps';
 
 function RouterTest01() {
   const [auth, setAuth] = useState(false);
@@ -25,7 +27,13 @@ function RouterTest01() {
         <MLBreadcrumb />
         {/* 路由表 */}
         <Switch>
-          <Route exact path="/about">
+          <Route path="/order">
+            <OrderIndex />
+          </Route>
+          <Route path="/order-steps/:stepType?">
+            <OrderSteps />
+          </Route>
+          <Route path="/about">
             <About />
           </Route>
           <Route path="/about/contact">
